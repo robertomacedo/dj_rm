@@ -9,6 +9,8 @@ verify_ssl = true
 django = "*"
 requests = "*"
 flake8 = "*"
+heroku = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
