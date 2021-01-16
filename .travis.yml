@@ -11,4 +11,4 @@ install:
   - pip install pipenv
   - pipenv sync -d
 script:
-  - pipenv run flak8 .
+  - pipenv run flake8 .
