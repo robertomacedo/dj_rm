@@ -6,4 +6,3 @@ Curso Python Pro, estudando Python e Django
 [![Python 3](https://pyup.io/repos/github/robertomacedo/libpythonpro_rm/python-3-shield.svg)](https://pyup.io/repos/github/robertomacedo/libpythonpro_rm/)
 
 Atualizações ecorreções de bug no settings django.
-Close branch 5
