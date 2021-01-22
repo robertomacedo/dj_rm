@@ -14,6 +14,7 @@ heroku = "*"
 gunicorn = "*"
 pytest-django = "*"
 codecov = "*"
+python-decouple = "*"
 
 [requires]
 python_version = "3.8"
