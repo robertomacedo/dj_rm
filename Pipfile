@@ -11,6 +11,7 @@ requests = "*"
 flake8 = "*"
 heroku = "*"
 gunicorn = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.8"
