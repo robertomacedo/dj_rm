@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
-
 from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
