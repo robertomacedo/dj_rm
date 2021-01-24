@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from functools import partial
 from pathlib import Path
 import dj_database_url
-from decouple import config
+from decouple import Csv, config
 import os.path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     # My apps
     'django_rm.base',
 ]
