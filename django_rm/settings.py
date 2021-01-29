@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY') #'hal%&tn$qq%)$9fa+tdkbjkm_q7pt-9d)o139+i)c((b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pythondjangorm.herokuapp.com/']
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
