@@ -5,8 +5,6 @@ from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy
 
-class User(AbstractBaseUser,PermissionsMixin):
-
 
 class UserManager(BaseUserManager):
     use_in_migrations = True
@@ -22,6 +20,7 @@ class UserManager(BaseUserManager):
         user.set_password(password)
         user.save(using=self._db)
         return user
+
     def create_user(self, email, password=None, **extra_fields):
         extra_fields.setdefault('is_superuser', False)
         return self._create_user(email, password, **extra_fields)
@@ -75,7 +74,7 @@ class UserManager(BaseUserManager):
 
    def get_full_name(self):
        """
-       Return the first_nam
+       Return the first_name
        """
        full_name = '%s' % (self.first_name)
        return full_name.strip()
