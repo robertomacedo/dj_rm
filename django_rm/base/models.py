@@ -11,7 +11,7 @@ class UserManager(BaseUserManager):
 
     def _create_user(self, email, password, **extra_fields):
         """
-        Creates and seves a User with the given and password.
+        Creates and saves a User with the given and password.
         """
         if not email:
             raise ValueError('The given email must be set')
@@ -57,7 +57,7 @@ class UserManager(BaseUserManager):
     )
     date_joined = models.DateTimeField(_('date time'), default=timezone.now)
 
-   # objects = UserManager()
+   #objects = UserManager()
 
    EMAIL_FIELD = 'email'
    USERNAME_FIELD = 'email'
@@ -76,7 +76,7 @@ class UserManager(BaseUserManager):
        """
        Return the first_name
        """
-       full_name = '%s' % (self.first_name)
+       full_name = '%s' % self.first_name
        return full_name.strip()
 
    def get_short_name(self):
