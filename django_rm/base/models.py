@@ -41,7 +41,6 @@ class UserManager(BaseUserManager):
     Email and password are required. Other fields are optional.
 
     """
-
     first_name = models.Charfield(_('first_name'), max_length=30, blank=True)
     email = models.EmailField(_('email address'), unique=True)
     is_staff = models.BooleanField(
@@ -83,5 +82,5 @@ class UserManager(BaseUserManager):
        """Return the short name for the user."""
        return self.first_name
 
-   def email_user(self, subject, message, from_email=None, **kwargs):
+   def email_user(self, subject, message, from_email=None, **kwargs)
        send_mail(subject, message, from_email, [self.email], **kwargs)
