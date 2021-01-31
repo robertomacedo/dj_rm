@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse('<h1>Python Pro curso de Django</h1>')
+    return HttpResponse('<html><body><h1>Curso de Django</h1></body></html>')
