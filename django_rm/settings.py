@@ -136,12 +136,12 @@ USE_TZ = True
 
 # Configuração de ambiente de desenvolvimento
 
-STATIC_URL = '/statics/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_URL = '/statics/'
+MEDIA_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-COLLECTFAST_ENABLE = False
+COLLECTFAST_ENABLED = False
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
@@ -157,14 +157,14 @@ if AWS_ACCESS_KEY_ID:
     #AWS_S3_CUSTOM_DOMAIN = None #ver depois
     #AWS_DEFAULT_ACL = 'private' # ver depois
 
-    COLLECTFAST_ENABLE = True
+    COLLECTFAST_ENABLED = True
 
     AWS_DEFAULT_ACL = None
 
     # Static Assets
     #-----------------------------------------------------------------
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
-    STATIC_S3_PATH = 'statics'
+    STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'/{STATIC_S3_PATH}/'
     STATIC_URL = f'//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{STATIC_S3_PATH}'
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
